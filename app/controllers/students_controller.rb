@@ -21,7 +21,7 @@ class StudentsController < ApplicationController
   end
 
   def index
-     @students = Student.student_search
+     @students = student_search
   end
 
 private
