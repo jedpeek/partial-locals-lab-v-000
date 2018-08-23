@@ -27,6 +27,9 @@ class StudentsController < ApplicationController
 
 private
 
+def search
+  Student.all.match(params[:query])
+
   def student_params
     params.require(:student).permit(:name, :birthday, :hometown)
   end
